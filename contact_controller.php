@@ -7,7 +7,7 @@ $recaptcha = $_POST["g-recaptcha-response"];
 $url = 'https://www.google.com/recaptcha/api/siteverify';
 
 $data = array(
-  'secret' => 'OJO',
+  'secret' => '6LfyRXcUAAAAAM7Lz8u0b2l9iFjDz2TJITn2KUhL',
   'response' => $recaptcha
 );
 
@@ -32,12 +32,16 @@ if ($captcha_success->success) {
   $headers .= "From: ".$_POST['name'];
 
   mail($destinatario, $asunto, $cuerpo, $headers);
+  header("Location: index.html");
+
 	echo "<script type='text/javascript'>alert('Mensaje enviado!');</script>";
 
   exit;
 
 } else {
-  echo "<script type='text/javascript'>alert('Reintenta usar el captcha!');</script>";
+  header("Location: index.html");
+  
+  echo "<script type='text/javascript'>alert('Error en el captcha!');</script>";
   exit;
 }
 

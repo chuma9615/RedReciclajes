@@ -1,5 +1,5 @@
 <!doctype html>
-<title>En Construccion</title>
+<title>En Construcción</title>
 <style>
   body { text-align: center; padding: 150px; }
   h1 { font-size: 50px; }
@@ -10,7 +10,7 @@
 </style>
 
 <article>
-    <h1>Este sitio se encuentra en construccion</h1>
+    <h1>Este sitio se encuentra en construcción</h1>
     <div>
         <p></p>
         <p></p>
